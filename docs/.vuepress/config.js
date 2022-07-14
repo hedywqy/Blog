@@ -1,8 +1,9 @@
 const {
     defaultTheme
 } = require('@vuepress/theme-default');
-
-const { commentPlugin } = require("vuepress-plugin-comment2");
+const {
+    commentPlugin
+} = require("vuepress-plugin-comment2");
 
 module.exports = {
     lang: 'zh-CN',
@@ -31,7 +32,7 @@ module.exports = {
     },
     theme: defaultTheme({
         repo: 'https://github.com/hedywqy',
-        logo: '/images/logo.png',    
+        logo: '/images/logo.png',
         locales: {
             '/': {
                 selectLanguageName: '简体中文',
@@ -71,12 +72,12 @@ module.exports = {
         ],
     }),
     plugins: [
-      commentPlugin({
-        provider: "Giscus",
-        repo: "hedywqy/blog",
-        repoId: "R_kgDOHp6wEg",
-        category: "Announcements",
-        categoryId: "DIC_kwDOHp6wEs4CQNxm",
-      }),
+        commentPlugin({
+            provider: "Giscus",
+            repo: "hedywqy/blog",
+            repoId: "R_kgDOHp6wEg",
+            category: "Announcements",
+            categoryId: "DIC_kwDOHp6wEs4CQNxm",
+        }),
     ],
 }
