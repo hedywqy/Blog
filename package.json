@@ -1,0 +1,14 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "hedywqy <hedywqy@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.49"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs --clean-cache",
+    "docs:build": "vuepress build docs --clean-cache"
+  }
+}
