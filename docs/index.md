@@ -3,8 +3,9 @@ home: true
 heroImage: /images/logo.png
 heroText: 水星曙光
 tagline: Personal Wiki
-actionText: 继续记录 →
-actionLink: /zh/guide/
+actions:
+  - text: Docs
+    link: https://hedywqy.github.io
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

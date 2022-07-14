@@ -5,7 +5,8 @@
   "author": "hedywqy <hedywqy@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.49"
+    "vuepress": "^2.0.0-beta.49",
+    "vuepress-plugin-comment2": "^2.0.0-beta.86"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs --clean-cache",

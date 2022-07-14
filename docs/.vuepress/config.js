@@ -1,6 +1,8 @@
 const {
     defaultTheme
-} = require('@vuepress/theme-default')
+} = require('@vuepress/theme-default');
+
+const { commentPlugin } = require("vuepress-plugin-comment2");
 
 module.exports = {
     lang: 'zh-CN',
@@ -29,7 +31,7 @@ module.exports = {
     },
     theme: defaultTheme({
         repo: 'https://github.com/hedywqy',
-        logo: '/images/logo.png',
+        logo: '/images/logo.png',    
         locales: {
             '/': {
                 selectLanguageName: '简体中文',
@@ -38,5 +40,43 @@ module.exports = {
                 selectLanguageName: 'English',
             },
         },
+        navbar: [{ // 右上导航航条 docs/.vuepress/README.md
+                text: '概述',
+                link: '/'
+            },
+            {
+                text: 'Vue 学习笔记',
+                children: [{
+                        text: '笔记',
+                        link: '/about/index.md'
+                    }, // 可不写后缀 .md
+                    {
+                        text: '其它链接',
+                        link: 'https://www.baidu.com/'
+                    } // 外部链接
+                ]
+            },
+            {
+                text: 'Typescript 学习笔记',
+                children: [{
+                        text: '笔记',
+                        link: '/guide/ts/'
+                    }, // 以 ‘/’结束，默认读取 README.md
+                    {
+                        text: '其它链接',
+                        link: 'https://www.baidu.com/'
+                    } // 外部链接
+                ]
+            }
+        ],
     }),
+    plugins: [
+      commentPlugin({
+        provider: "Giscus",
+        repo: "hedywqy/blog",
+        repoId: "R_kgDOHp6wEg",
+        category: "Announcements",
+        categoryId: "DIC_kwDOHp6wEs4CQNxm",
+      }),
+    ],
 }
