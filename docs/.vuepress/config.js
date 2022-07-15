@@ -1,11 +1,20 @@
+// const {
+//     defaultTheme
+// } = require('@vuepress/theme-default');
+
 const {
-    defaultTheme
-} = require('@vuepress/theme-default');
+    commentTheme
+} = require('./theme');
+
 const {
     commentPlugin
 } = require("vuepress-plugin-comment2");
+const {
+    defineUserConfig
+} = require("@vuepress/cli");
 
-module.exports = {
+
+module.exports = defineUserConfig({
     lang: 'zh-CN',
     // 如果你打算发布到 https://<USERNAME or GROUP>.gitlab.io/，则可以省略这一步，因为 base 默认即是 "/"
     // 如果你打算发布到 https://<USERNAME or GROUP>.gitlab.io/<REPO>/（也就是说你的仓库在 https://gitlab.com/<USERNAME>/<REPO>），则将 base 设置为 "/<REPO>/"
@@ -30,8 +39,8 @@ module.exports = {
         },
 
     },
-    theme: defaultTheme({
-        repo: 'https://github.com/hedywqy',
+    theme: commentTheme({
+        repo: 'https://github.com/hedywqy/blog',
         logo: '/images/logo.png',
         locales: {
             '/': {
@@ -80,4 +89,4 @@ module.exports = {
             categoryId: "DIC_kwDOHp6wEs4CQNxm",
         }),
     ],
-}
+})

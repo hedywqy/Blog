@@ -1,12 +1,20 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "hedywqy <hedywqy@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^2.0.0-beta.49",
-    "vuepress-plugin-comment2": "^2.0.0-beta.86"
+    "vuepress-plugin-comment2": "^2.0.0-beta.86",
+    "@vuepress/cli": "2.0.0-beta.49",
+    "@vuepress/client": "2.0.0-beta.49",
+    "@vuepress/core": "2.0.0-beta.49",
+    "@vuepress/theme-default": "2.0.0-beta.49",
+    "@vuepress/utils": "2.0.0-beta.49",
+    "sass-loader": "13.0.2",
+    "vue": "3.2.37",
+    "vuepress-vite": "2.0.0-beta.49",
+    "vuepress-webpack": "2.0.0-beta.49"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs --clean-cache",
