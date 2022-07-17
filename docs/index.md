@@ -4,8 +4,8 @@ heroImage: /images/logo.png
 heroText: 水星曙光
 tagline: Personal Wiki
 actions:
-  - text: Docs
-    link: https://hedywqy.github.io
+  - text: 🤖🤖🤖 ➡
+    link: /about/README.md
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

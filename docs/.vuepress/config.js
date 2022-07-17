@@ -1,7 +1,15 @@
-// const {
-//     defaultTheme
-// } = require('@vuepress/theme-default');
+// "vuepress": "^2.0.0-beta.43",
+// "vuepress-theme-mix": "^1.3.2"
 
+const {
+    clipboardPlugin
+} = require('vuepress-plugin-clipboard');
+const {
+    searchPlugin
+} = require('@vuepress/plugin-search');
+const {
+    kanbanniang
+} = require('@vuepress-reco/vuepress-plugin-kan-ban-niang');
 const {
     commentTheme
 } = require('./theme');
@@ -88,5 +96,19 @@ module.exports = defineUserConfig({
             category: "Announcements",
             categoryId: "DIC_kwDOHp6wEs4CQNxm",
         }),
+        clipboardPlugin({
+            staticIcon:true,
+            successText:"已复制!"
+        }),
+        // searchPlugin({
+        //     locales: {
+        //         '/': {
+        //             placeholder: '搜索',
+        //         },
+        //         '/en/': {
+        //             placeholder: 'Search',
+        //         },
+        //     },
+        // }),
     ],
 })

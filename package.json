@@ -4,20 +4,28 @@
   "author": "hedywqy <hedywqy@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.49",
-    "vuepress-plugin-comment2": "^2.0.0-beta.86",
+    "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
     "@vuepress/cli": "2.0.0-beta.49",
     "@vuepress/client": "2.0.0-beta.49",
     "@vuepress/core": "2.0.0-beta.49",
+    "@vuepress/plugin-nprogress": "^2.0.0-beta.49",
+    "@vuepress/plugin-search": "^2.0.0-beta.49",
     "@vuepress/theme-default": "2.0.0-beta.49",
     "@vuepress/utils": "2.0.0-beta.49",
     "sass-loader": "13.0.2",
     "vue": "3.2.37",
+    "vuepress": "^2.0.0-beta.49",
+    "vuepress-plugin-clipboard": "^2.1.1",
+    "vuepress-plugin-comment2": "^2.0.0-beta.86",
     "vuepress-vite": "2.0.0-beta.49",
     "vuepress-webpack": "2.0.0-beta.49"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs --clean-cache",
     "docs:build": "vuepress build docs --clean-cache"
+  },
+  "dependencies": {
+    "vue-tabs-component": "^1.5.0",
+    "vuepress-plugin-tabs": "^0.3.0"
   }
 }
