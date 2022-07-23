@@ -22,7 +22,8 @@
   },
   "scripts": {
     "docs:dev": "vuepress dev docs --clean-cache",
-    "docs:build": "vuepress build docs --clean-cache"
+    "docs:build": "vuepress build docs --clean-cache",
+    "deploy": "bash deploy-new.sh"
   },
   "dependencies": {
     "vue-tabs-component": "^1.5.0",

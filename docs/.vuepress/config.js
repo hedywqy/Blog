@@ -29,6 +29,9 @@ module.exports = defineUserConfig({
     base: "/",
     // dest: './dist',
     host: 'localhost',
+    markdown: {
+        lineNumber: true //
+    },
     port: 8080,
     title: "水星曙光",
     description: "个人笔记汇总",
@@ -59,32 +62,34 @@ module.exports = defineUserConfig({
             },
         },
         navbar: [{ // 右上导航航条 docs/.vuepress/README.md
-                text: '概述',
+                text: '主页',
                 link: '/'
             },
             {
-                text: 'Vue 学习笔记',
+                text: '学习笔记',
                 children: [{
-                        text: '笔记',
-                        link: '/about/index.md'
+                        text: '设计模式',
+                        link: '/IT/设计模式.md',
+                        children: [{
+                            text: "创建型",
+                            link: "/IT/创建型.md"
+                        }]
                     }, // 可不写后缀 .md
                     {
-                        text: '其它链接',
+                        text: '微服务',
                         link: 'https://www.baidu.com/'
                     } // 外部链接
                 ]
             },
             {
-                text: 'Typescript 学习笔记',
+                text: '导航',
                 children: [{
-                        text: '笔记',
-                        link: '/guide/ts/'
-                    }, // 以 ‘/’结束，默认读取 README.md
-                    {
-                        text: '其它链接',
-                        link: 'https://www.baidu.com/'
-                    } // 外部链接
-                ]
+                    text: '资源',
+                    children: ['/resource/index.md']
+                }, {
+                    text: '站点',
+                    children: ['/resource/index.md']
+                }]
             }
         ],
     }),
@@ -97,18 +102,18 @@ module.exports = defineUserConfig({
             categoryId: "DIC_kwDOHp6wEs4CQNxm",
         }),
         clipboardPlugin({
-            staticIcon:true,
-            successText:"已复制!"
+            staticIcon: true,
+            successText: "已复制!"
         }),
-        // searchPlugin({
-        //     locales: {
-        //         '/': {
-        //             placeholder: '搜索',
-        //         },
-        //         '/en/': {
-        //             placeholder: 'Search',
-        //         },
-        //     },
-        // }),
+        searchPlugin({
+            locales: {
+                '/': {
+                    placeholder: '搜索',
+                },
+                '/en/': {
+                    placeholder: 'Search',
+                },
+            },
+        }),
     ],
 })
